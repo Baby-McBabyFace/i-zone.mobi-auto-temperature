@@ -2,13 +2,12 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from time import sleep, strftime
+from time import sleep, strftime, localtime
 import random
 import pyautogui
-import time
 
 def getTime():
-    hourNow = time.strftime("%H", time.localtime())
+    hourNow = strftime("%H", localtime())
     return int(hourNow)
 
 def randomTemp():
